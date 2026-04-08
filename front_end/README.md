@@ -5,8 +5,16 @@ Chào mừng bạn đến với thư mục **Frontend**. Thư mục này tập h
 ## 🗂 Cấu trúc thư mục
 
 ### 🤖 Kỹ Năng / Role (Agent Skill)
-* **[`frontend-developer-skill.md`](./frontend-developer-skill.md)**
-  Định nghĩa vai trò và bộ kỹ năng (skill) của một **Senior Frontend Developer**. File này hướng dẫn chuẩn mực về Next.js/React, phân tách Server/Client Components, quản lý state (Zustand, React Query), và các checklist quan trọng về hiệu năng (Core Web Vitals), bảo mật cũng như trợ năng (A11Y). Giao file này cho AI Agent khi bạn cần Agent lập trình frontend.
+Bộ kĩ năng Frontend được cấu trúc theo dạng chu kỳ (Pipeline) gồm 3 bước tuần tự. AI Agent buộc phải theo trình tự này để kết xuất mã nguồn đạt chuẩn:
+
+1. **[`frontend-developer-skill.md`](./frontend-developer-skill.md)** (Bước 1: Core Mandate)
+   Định nghĩa vai trò của một **Senior Frontend Developer**. Hướng dẫn chuẩn mực gốc về kiến trúc Next.js/React, phân tách Component, quản lý state và các checklist quy chuẩn.
+2. **[`frontend-design-skill.md`](./frontend-design-skill.md)** (Bước 2: Aesthetic Planning)
+   Hệ tư tưởng thẩm mỹ. Ngăn chặn giao diện "AI đại trà" thông qua các quyết định thiết kế Layout, Typography, và Motion có chủ đích.
+3. **[`frontend-patterns-skill.md`](./frontend-patterns-skill.md)** (Bước 3: Technical Execution)
+   Toolkit kỹ thuật (Implementation). Chứa các React Patterns nâng cao (Compound Components, Custom Hooks, Lazy Loading, Reducer) dùng để code sạch và tối ưu hiệu năng.
+4. **[`frontend-review-skill.md`](./frontend-review-skill.md)** (Bước 4: Quality Gate)
+   Kĩ năng Review Code. Áp dụng khi AI cần kiểm duyệt lỗi (Review Changes). Sử dụng bộ template định dạng xuất file cực kì nghiêm ngặt và đối chiếu các tiêu chí chất lượng qua thư mục con `review-rules/`.
 
 ### 📚 Bộ Quy Tắc (Project Rules)
 Đây là các bộ luật cốt lõi (core mandate) đóng vai trò định hướng mọi hoạt động lập trình trong thư mục/dự án này. Mọi mã nguồn được tạo ra dù là con người hay AI đều phải tuân thủ nghiêm ngặt:
