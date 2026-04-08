@@ -1,24 +1,31 @@
-# Vancevo Skills
+# Vancevo Project Skills & Rules
 
-Welcome to the **Vancevo Skills** repository. This directory contains detailed agent personas, skills guidelines, and strict project-level development rules used for standardizing development processes.
+Chào mừng bạn đến với kho lưu trữ **Vancevo Skills**. Đây là trung tâm quản lý toàn bộ các kỹ năng dành cho AI Agents (Agent Skills) cũng như các bộ tiêu chuẩn, nguyên tắc lập trình (Project Rules) của toàn bộ dự án.
 
-## 🗂 Contents
+Khác với một kho code thông thường, repo này đóng vai trò như "bộ não" hướng dẫn chuẩn mực cho cả các thành viên trong đội ngũ phát triển và cho các trợ lý AI (ví dụ: Claude, Gemini) tham gia vào việc viết hay phân tích mã nguồn.
 
-### 🤖 Role & Skills
-* **[`frontend-developer-skill.md`](./frontend-developer-skill.md)**
-  Comprehensive documentation for the Senior Frontend Developer persona. This includes the tech stack, component rules (Server vs. Client Components, Hooks, Data Fetching), state management frameworks, checklists, and troubleshooting guides specifically tailored to the React/Next.js ecosystem.
+---
 
-### 📚 Project-Level Rules
-These rule files act as the core mandate for all the agents/skills working in this environment:
+## 🗂 Cấu Trúc Tổng Thể
 
-* **[`tech-stack.md`](./tech-stack.md)**
-  Defines the approved technology stack for both backend and frontend development, establishing constraints and requirements for the architecture.
-  
-* **[`clean-code.md`](./clean-code.md)**
-  Outlines principles for writing maintainable, readable, and robust code. Includes best practices for logic organization, decoupling, and structure.
+Dự án được chia theo các phân hệ rõ ràng để tiện cho việc nạp kiến thức (context) mảng nào ra mảng đó. Điều này giúp tránh bị loãng thông tin và AI Agent có thể làm việc tập trung hơn.
 
-* **[`code-style.md`](./code-style.md)**
-  Contains strict formatting and styling rules to ensure uniform code appearance and quality across the entire project (e.g., naming conventions, linting rules, styling patterns).
+### Hiện tại:
+* **[`/front_end`](./front_end)**: Chứa toàn bộ Agent Skill và Rules (Tech Stack, Clean Code, Code Style) dành riêng cho mảng giao diện (hiện đang dùng Next.js / React). Khi có tác vụ ở Frontend, hãy điều phối AI Agent tham chiếu thư mục này.
 
-## 💡 How to Use
-When deploying an AI agent or delegating development tasks, reference these files to ensure the output adheres to the **Vancevo Standards**. Agents should ingest the `frontend-developer-skill.md` alongside the associated project rules (`tech-stack`, `clean-code`, `code-style`) before they start writing code.
+### Mở rộng trong tương lai:
+* **`/back_end`**: Sẽ chứa kỹ năng, kiến trúc API, Database schemas, nguyên tắc bảo mật và tech-stack dành cho mảng Backend (Node.js/Python/Go/Java...).
+* **`/devops`**: Sẽ chứa hướng dẫn thiết lập CI/CD, kịch bản triển khai (Deployment scripts), quản trị Docker & Cloud và giám sát (Monitoring).
+* **`/qa_testing`**: Sẽ chứa kỹ năng viết Automation Test, End-to-End Test, Integration Test và quy chuẩn nghiệm thu chất lượng phần mềm.
+
+---
+
+## 💡 Hướng Dẫn Sử Dụng (Dành cho Người Dùng / Kỹ Sư)
+
+1. **Phân Rã Context**: Khi giao nhiệm vụ cho AI, ***đừng gửi toàn bộ thư mục***. Tác vụ thuộc phân hệ nào (thực thi ở Frontend hay Backend?), xin hãy chỉ đọc và truyền cho AI đúng các file rules nằm trong thư mục tương ứng. Sự tập trung sẽ đem lại kết quả code chính xác hơn.
+2. **Khởi Tạo Phân Hệ Mới**: Tương tự như `/front_end`, khi muốn xây dựng quy chuẩn cho team BE hay DevOps, hãy tạo thư mục mới. Ở bên trong thư mục đó, luôn nhớ sinh tối thiểu 2 file cốt lõi:
+   * `[role]-skill.md`: Định hình tư duy của AI khi đóng vai trò đó.
+   * `tech-stack.md` (hoặc `rules.md`): Bộ luật bắt buộc tuân theo bằng code.
+
+---
+*Mọi thay đổi trên repo này sẽ ảnh hưởng trực tiếp đến chất lượng code chung của dự án do cả team kĩ sư lẫn team AI tham gia sản xuất. Vui lòng thảo luận kỹ trước khi chỉnh sửa bộ rules.*
